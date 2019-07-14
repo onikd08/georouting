@@ -1,0 +1,4 @@
+the default file is test2.txt
+the program has to run first then it will show the primary graph. the window needs to be closed for further processing.
+then it will ask for source and destination. input will be like a,b,c,d,e,f,g,h,i,j. other exception will show error.  
+if the path exist, the optimal path will show up.
