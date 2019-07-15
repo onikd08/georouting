@@ -8,8 +8,12 @@ coordinates = {}
 edges = []
 pred = {}
 
+file_name = input("File Name: ")
+source = input("Source: ")
+destination = input("Destination: ")
 
-with open('test2.txt') as f:
+
+with open(file_name) as f:
     for line in f:
         data = line.replace("\n", "").split(" ")
         if len(data) == 3:
@@ -45,11 +49,11 @@ for nodeI in nodes:
 
 plt.title("Primary Graph")
 plt.show()
-source = input("Source: ")
-destination = input("Destination: ")
+
 
 
 # generate path weight for all pair node
+
 for nodeK in nodes:
     for nodeI in nodes:
         for nodeJ in nodes:
@@ -82,12 +86,15 @@ def show_optimal_path(u, v):
         if dis[u][v] != math.inf:
             plt.plot([coordinates[u][0], coordinates[v][0]], [coordinates[u][1], coordinates[v][1]],
                  'g-')
+        else:
+            print("Path not found")
     else:
         show_optimal_path(u, pred[u][v])
         show_optimal_path(pred[u][v], v)
 
 
 show_optimal_path(source, destination)
+
 plt.title("Optimal Path")
 plt.legend()
 plt.show()
