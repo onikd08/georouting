@@ -1,4 +1,11 @@
-the default file is test2.txt
-the program has to run first then it will show the primary graph. the window needs to be closed for further processing.
-then it will ask for source and destination. input will be like a,b,c,d,e,f,g,h,i,j. other exception will show error.  
-if the path exist, the optimal path will show up.
+After executing the file, the program will ask for a valid file from where it will load the graph. For wrong input, 
+it will show an error message ("Invalid File")
+
+After you enter a valid file, then the program will ask for a source and a destinantion. If source or the destination is 
+invalid, then it will show an error message ("Unknown source or destination")
+
+If the source and destination both are valid and there is a path between them, then it will show the primary graph. After
+you close the window of the primary graph, the optimal path between source and destination will be shown.
+
+If there is no path between source and destination then the primary graph will be shown, indicating source and destination.
+Also, a message will be printed in the console, ("Path not found")
